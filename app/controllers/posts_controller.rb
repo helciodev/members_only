@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  #before_action :require_login, only: [:new, :create]
+  before_action :authenticate_member!, except: [:index, :show]
   # GET /posts or /posts.json
   def index
     @posts = Post.all
