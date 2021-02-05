@@ -11,8 +11,18 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+
+    <div class="container-fluid">
+      <%= link_to 'Member Club', root_path, class:'navbar-brand ' %>
+      
+      <div class="d-flex justify-content-space-between justify-self-end">
+        <%= link_to 'New Post', new_post_path, class:' btn btn-primary text-white' %>
+        <%= link_to 'Sign Up', new_member_registration_path, class:' btn btn-primary text-white' %>
+        <%= link_to 'Log In', new_member_session_path, class:' btn btn-primary text-white' %>
+        <%= link_to 'Sign Out', destroy_member_session_path, class:' btn btn-primary text-white' %>
+      </div>
+      
+    </div>
     <%= yield %>
   </body>
 </html>
