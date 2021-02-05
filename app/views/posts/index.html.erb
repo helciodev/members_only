@@ -7,7 +7,9 @@
 
     <div class=" col-md-4">
         <h2>Member Posts</h2>
-        <%= render 'form' %>
+        <% if member_signed_in? %>
+          <%= render 'form' %>
+        <% end %>
         <% @posts.each do |post| %>
         <% if member_signed_in? %>
        <p class="fw-bold">

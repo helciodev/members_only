@@ -10,7 +10,7 @@ This project is based on building an exclusive clubhouse where your members can 
 
 **Member logged out view**
 
-![view from logout member](app/assets/images/log_out.jpg)
+![view from logout member](app/assets/images/logg_out.png)
 
 **Comment table**
 
