@@ -33,7 +33,7 @@ gem 'bootstrap', '~> 5.0.0.beta1'
 
 # simple form gem
 gem 'simple_form'
-  
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 

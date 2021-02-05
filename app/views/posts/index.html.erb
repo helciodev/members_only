@@ -14,7 +14,9 @@
         <% if member_signed_in? %>
        <p class="fw-bold">
           <%= post.member.name %>
-       </p> 
+       </p>
+       <% else %>
+      <p class="fw-bold">Anonymous Member</p>
         <% end %>
           <p>
             <%= post.body %>
