@@ -22,11 +22,7 @@ class PostsController < ApplicationController
 
   # POST /posts or /posts.json
   def create
-<<<<<<< HEAD
-    @post = current_member.posts.build(post_params)
-=======
     @post = Post.new(post_params)
->>>>>>> d32b92f653391ca64fc6ddd4bb623dd7cacb82a8
 
     respond_to do |format|
       if @post.save
