@@ -34,21 +34,15 @@ If you intend to download the project, you will need to have Ruby and Rails alre
 - For more information on how to install Ruby, follow [this link.](https://www.ruby-lang.org/en/downloads/)
 - For more information on how to install Rails, follow [this link.](https://guides.rubyonrails.org/getting_started.html/)
 
-### Installation instructions
+## Getting Started
 
-Follow along the steps below to get a copy on your local machine.
-
-- Navigate to the directory where you want this project to live and then clone it `git clone git@github.com:helciodev/members_only.git`
-- Navigate to the `members_only` directory
-- Install the gem package with `bundle install`
-- Migrate the database on your local machine with `rails db:migrate`
-- Open the console ($ rails console or rails c)
-- Start rails server ($ rails server or rails s)
-
-**To get your own copy of our project clone the repository to your local machine.**
-
-[repository](https://github.com/helciodev/members_only)
-
+### Setup
+1. Run `git clone git@github.com:helciodev/members_only.git` => to clone the source code
+2. Run `cd members-only` => to change directory
+3. Run `bundle install` => to install all of the gems
+4. Run `rails db:migrate` to migrate all tables
+5. Run `rails s` => to start the server
+6. Open `localhost:3000` on a browser of your choice
 ## Authors
 
 😎 **Helcio André**
