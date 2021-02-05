@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="row  " >
+  <div class="row" >
 
     <div class=" col-md-4">
         <h2>latest Updates</h2>
@@ -9,10 +9,14 @@
         <h2>Member Posts</h2>
         <%= render 'form' %>
         <% @posts.each do |post| %>
+        <% if member_signed_in? %>
+       <p class="fw-bold">
+          <%= post.member.name %>
+       </p> 
+        <% end %>
           <p>
             <%= post.body %>
           </p>
-          <p>created by unknown user </p>
         <% end %>
     </div>
 
