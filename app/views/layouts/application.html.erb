@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MembersOnly</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%if flash[:notice] %>
+  <div class="bg-success">
+  <p class="text-white"><%= notice %></p>
+  </div>
+  <%end%>
+
+  <%if flash[:alert] %>
+  <div class="bg-warning">
+  <p class="text-white"><%= notice %></p>
+  </div>
+  <%end%>
+    <div class="container-fluid">
+      <%= link_to 'Member Club', root_path, class:'navbar-brand ' %>
+      <div class="d-flex justify-content-space-between justify-self-end">
+    <% if member_signed_in? %>
+      <%= link_to 'New Post', new_post_path, class:' btn btn-primary text-white' %>
+       <%= link_to 'Sign Out', destroy_member_session_path, method: :delete, class:' btn btn-primary text-white' %>
+       <% else %>
+        <%= link_to 'Sign Up', new_member_registration_path, class:' btn btn-primary text-white' %>
+        <%= link_to 'Log In', new_member_session_path, class:' btn btn-primary text-white' %>
+    <%end  %>
+        
+        
+       
+      </div>
+      
+    </div>
+    <%= yield %>
+  </body>
+</html>
